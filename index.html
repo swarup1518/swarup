@@ -3,24 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexaVerse - Digital Excellence</title>
+    <title>Swarup - My Digital Profile</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="templatemo-nexaverse.css">
-<!-- 
 
-TemplateMo 603 Nexaverse
-
-https://templatemo.com/tm-603-nexaverse
-
--->
 </head>
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loader-ring"></div>
-        <div class="loading-text">Initializing Experience...</div>
+        <div class="loading-text">Loading My Profile</div>
     </div>
 
     <!-- Ambient Background -->
@@ -44,15 +38,46 @@ https://templatemo.com/tm-603-nexaverse
                             <stop offset="0%" style="stop-color:#00f0ff"/>
                             <stop offset="100%" style="stop-color:#ff00d4"/>
                         </linearGradient>
+                
+                        <!-- Glow effect -->
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="2" result="blur"/>
+                            <feMerge>
+                                <feMergeNode in="blur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
                     </defs>
-                    <polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
-                    <polygon points="50,20 80,37 80,63 50,80 20,63 20,37" fill="none" stroke="url(#logoGradient)" stroke-width="1.5" opacity="0.6"/>
-                    <circle cx="50" cy="50" r="12" fill="url(#logoGradient)" opacity="0.3"/>
-                    <circle cx="50" cy="50" r="6" fill="url(#logoGradient)"/>
+                
+                    <!-- Outer Hexagon -->
+                    <polygon points="50,5 95,30 95,70 50,95 5,70 5,30"
+                             fill="none"
+                             stroke="url(#logoGradient)"
+                             stroke-width="2" />
+                
+                    <!-- Inner Hexagon -->
+                    <polygon points="50,20 80,37 80,63 50,80 20,63 20,37"
+                             fill="none"
+                             stroke="url(#logoGradient)"
+                             stroke-width="1.5"
+                             opacity="0.6" />
+                
+                    <!-- Center Text SP -->
+                    <text x="50" y="58"
+                          text-anchor="middle"
+                          font-size="28"
+                          font-family="Poppins, Montserrat, Arial, sans-serif"
+                          font-weight="900"
+                          fill="url(#logoGradient)"
+                          filter="url(#glow)"
+                          letter-spacing="1">
+                        SP
+                    </text>
                 </svg>
+                
             </div>
-            <h1 class="brand-name">NexaVerse</h1>
-            <p class="tagline">Digital Excellence Redefined</p>
+            <h1 class="brand-name">Swarup Puvvada</h1>
+            <p class="tagline">The AI Enabled Devops Engineer</p>
         </div>
 
         <!-- Menu Grid -->
@@ -62,20 +87,20 @@ https://templatemo.com/tm-603-nexaverse
                 <div class="menu-title">Introduction</div>
             </div>
             <div class="menu-item initial-load" data-section="services">
-                <div class="menu-badge">SV</div>
-                <div class="menu-title">Services</div>
+                <div class="menu-badge">RE</div>
+                <div class="menu-title">Responsibilities</div>
             </div>
             <div class="menu-item initial-load" data-section="gallery">
-                <div class="menu-badge">GL</div>
-                <div class="menu-title">Gallery</div>
+                <div class="menu-badge">WE</div>
+                <div class="menu-title">Technologies</div>
             </div>
             <div class="menu-item initial-load" data-section="testimonials">
-                <div class="menu-badge">TM</div>
-                <div class="menu-title">Testimonials</div>
+                <div class="menu-badge">WE</div>
+                <div class="menu-title">Work Experience</div>
             </div>
             <div class="menu-item initial-load" data-section="about">
-                <div class="menu-badge">AB</div>
-                <div class="menu-title">About</div>
+                <div class="menu-badge">AM</div>
+                <div class="menu-title">About Me</div>
             </div>
             <div class="menu-item initial-load" data-section="contact">
                 <div class="menu-badge">CT</div>
@@ -101,8 +126,8 @@ https://templatemo.com/tm-603-nexaverse
                         </svg>
                     </div>
                     <div class="small-brand">
-                        <h3>NEXAVERSE</h3>
-                        <p>Digital Excellence</p>
+                        <h3>Swarup Puvvada</h3>
+                        <p>the AI Enabled Devops Engineer</p>
                     </div>
                 </div>
                 <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
@@ -110,26 +135,26 @@ https://templatemo.com/tm-603-nexaverse
                 <!-- Hero Banner -->
                 <div class="intro-hero">
                     <div class="intro-hero-content">
-                        <span class="intro-badge">Est. 2020</span>
-                        <h1 class="intro-headline">We Build Digital<br><span>Experiences</span> That Matter</h1>
-                        <p class="intro-subtext">Transforming visionary ideas into powerful digital realities through cutting-edge technology and creative excellence.</p>
+                        <span class="intro-badge">Born in 1990</span>
+                        <h1 class="intro-headline">I Architect <br><span>Intelligent Cloud Platforms</span>That Scale with Your Business</h1>
+                        <p class="intro-subtext">I lead the design, automation, and modernization of enterprise cloud environments using Azure, DevOps engineering, Infrastructure-as-Code, and AI-assisted observability—enabling organizations to deploy faster, operate safer, and innovate continuously.</p>
                         <div class="intro-cta-group">
-                            <button class="intro-cta-primary">Explore Our Work</button>
-                            <button class="intro-cta-secondary">Watch Showreel</button>
+                            <button class="intro-cta-primary">Explore My Work</button>
+                            <button class="intro-cta-secondary">Resume Download</button>
                         </div>
                     </div>
                     <div class="intro-hero-visual">
                         <div class="intro-floating-card card-1">
-                            <span class="card-icon">⚡</span>
-                            <span class="card-text">Lightning Fast</span>
+                            <span class="card-icon">🧠</span>
+                            <span class="card-text">AI-Augmented Decisioning & Incident Analysis</span>
                         </div>
                         <div class="intro-floating-card card-2">
-                            <span class="card-icon">🎯</span>
-                            <span class="card-text">Pixel Perfect</span>
+                            <span class="card-icon">🏗️</span>
+                            <span class="card-text">Enterprise-Grade Azure Cloud Architecture</span>
                         </div>
                         <div class="intro-floating-card card-3">
-                            <span class="card-icon">🔒</span>
-                            <span class="card-text">Secure & Reliable</span>
+                            <span class="card-icon">🔁</span>
+                            <span class="card-text">End-to-End DevOps Automation & Governance</span>
                         </div>
                         <div class="intro-orb"></div>
                     </div>
@@ -138,24 +163,25 @@ https://templatemo.com/tm-603-nexaverse
                 <!-- Metrics Strip -->
                 <div class="intro-metrics">
                     <div class="metric-item">
-                        <span class="metric-value" data-target="500">0</span>
-                        <span class="metric-label">Projects Delivered</span>
+                        <span class="metric-value" data-target="15+ ">0</span>
+                        <span class="metric-label">Enterprise Projects</span>
                     </div>
                     <div class="metric-divider"></div>
                     <div class="metric-item">
-                        <span class="metric-value" data-target="98">0</span>
+                        <span class="metric-value" data-target="1000+">0</span>
                         <span class="metric-suffix">%</span>
-                        <span class="metric-label">Client Retention</span>
+                        <span class="metric-label">Automated Workflows</span>
                     </div>
                     <div class="metric-divider"></div>
                     <div class="metric-item">
-                        <span class="metric-value" data-target="12">0</span>
-                        <span class="metric-label">Industry Awards</span>
+                        <span class="metric-value" data-target="40">0</span>
+                        <span class="metric-suffix">%</span>
+                        <span class="metric-label">Faster Release Cycles</span>
                     </div>
                     <div class="metric-divider"></div>
                     <div class="metric-item">
-                        <span class="metric-value">24/7</span>
-                        <span class="metric-label">Global Support</span>
+                        <span class="metric-value">14+</span>
+                        <span class="metric-label">Years Leadership Experience</span>
                     </div>
                 </div>
 
@@ -163,38 +189,41 @@ https://templatemo.com/tm-603-nexaverse
                 <div class="intro-values">
                     <div class="value-card">
                         <div class="value-number">01</div>
-                        <h3>Innovation First</h3>
-                        <p>We embrace emerging technologies and push creative boundaries to deliver solutions that set new industry standards.</p>
+                        <h3>Architecture with Purpose</h3>
+                        <p>I build cloud platforms that balance performance, cost efficiency, governance, and long-term maintainability—tailored to business outcomes.</p>
                     </div>
                     <div class="value-card">
                         <div class="value-number">02</div>
-                        <h3>Human-Centered</h3>
-                        <p>Every pixel, every interaction is designed with real users in mind. We create experiences people genuinely love.</p>
+                        <h3>AI-Enhanced Reliability</h3>
+                        <p>Leveraging Splunk, Dynatrace, and Application Insights, I design intelligent observability frameworks that detect anomalies early and reduce MTTR significantly.</p>
                     </div>
                     <div class="value-card">
                         <div class="value-number">03</div>
-                        <h3>Results Driven</h3>
-                        <p>Beautiful design meets measurable impact. We track, iterate, and optimize for outcomes that matter to your business.</p>
+                        <h3>Automation as a Culture</h3>
+                        <p>From IaC to CI/CD governance, I establish automation-first ecosystems that empower teams, prevent configuration drift, and accelerate innovation.</p>
                     </div>
                 </div>
 
                 <!-- Tech Stack Preview -->
                 <div class="intro-tech">
-                    <p class="tech-label">Technologies We Master</p>
+                    <p class="tech-label">Technologies I Master</p>
                     <div class="tech-marquee">
                         <div class="tech-track">
-                            <span class="tech-item">React</span>
-                            <span class="tech-item">Next.js</span>
-                            <span class="tech-item">Node.js</span>
+                            <span class="tech-item">Azure</span>
+                            <span class="tech-item">Azure DevOps</span>
+                            <span class="tech-item">GitHub Actions</span>
+                            <span class="tech-item">Terraform</span>
+                            <span class="tech-item">Kubernetes</span>
+                            <span class="tech-item">Docker</span>
+                            <span class="tech-item">Azure Foundry</span>
+                            <span class="tech-item">Dynatrace</span>
+                            <span class="tech-item">PowerShell</span>
                             <span class="tech-item">Python</span>
-                            <span class="tech-item">TensorFlow</span>
-                            <span class="tech-item">AWS</span>
-                            <span class="tech-item">Flutter</span>
-                            <span class="tech-item">Figma</span>
-                            <span class="tech-item">React</span>
-                            <span class="tech-item">Next.js</span>
-                            <span class="tech-item">Node.js</span>
-                            <span class="tech-item">Python</span>
+                            <span class="tech-item">Git</span>
+                            <span class="tech-item">YAML</span>
+                            <span class="tech-item">Deployment Engineering</span>
+                            <span class="tech-item">Azure OpenAI</span>
+                            <span class="tech-item">Azure Monitor</span>
                         </div>
                     </div>
                 </div>
@@ -216,35 +245,36 @@ https://templatemo.com/tm-603-nexaverse
                         </svg>
                     </div>
                     <div class="small-brand">
-                        <h3>NEXAVERSE</h3>
-                        <p>Digital Excellence</p>
+                        <h3>Swarup Puvvada</h3>
+                        <p>AI-Enabled DevOps & Platform Engineer</p>
                     </div>
                 </div>
                 <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
 
                 <div class="section-header">
-                    <h2 class="section-title">Our Services</h2>
-                    <p class="section-subtitle">Comprehensive solutions for the digital age</p>
+                    <h2 class="section-title">Work Experience</h2>
+                    <p class="section-subtitle">A journey of building scalable, reliable, and AI-enabled cloud platforms</p>
                 </div>
 
                 <div class="tabs-container">
                     <div class="tab-buttons">
-                        <button class="tab-btn active" onclick="switchTab(this, 'development')">Development</button>
-                        <button class="tab-btn" onclick="switchTab(this, 'design')">Design</button>
-                        <button class="tab-btn" onclick="switchTab(this, 'consulting')">Consulting</button>
-                        <button class="tab-btn" onclick="switchTab(this, 'support')">Support</button>
+                        <button class="tab-btn active" onclick="switchTab(this, 'cloud')">Cloud</button>
+                        <button class="tab-btn" onclick="switchTab(this, 'devops')">DevOps</button>
+                        <button class="tab-btn" onclick="switchTab(this, 'iac')">Infrastructure as Code (IaC)</button>
+                        <button class="tab-btn" onclick="switchTab(this, 'aks')">Kubernetes (AKS)</button>
+                        <button class="tab-btn" onclick="switchTab(this, 'ai')">Artificial Intelligence</button>
                     </div>
 
                     <div class="tab-content">
-                        <div class="tab-pane active" id="development">
+                        <div class="tab-pane active" id="cloud">
                             <div class="services-list">
                                 <div class="service-row">
                                     <div class="service-row-icon">
                                         <img src="images/ai-optimized-templates.jpg" alt="AI Development">
                                     </div>
                                     <div class="service-row-content">
-                                        <h4>AI Development</h4>
-                                        <p>Custom AI solutions powered by machine learning and neural networks for intelligent automation and predictive analytics.</p>
+                                        <h4>Cloud Architecture</h4>
+                                        <p>Design and implement secure, scalable Azure environments using IaaS, PaaS, and serverless patterns.</p>
                                     </div>
                                     <div class="service-row-arrow">→</div>
                                 </div>
@@ -253,8 +283,8 @@ https://templatemo.com/tm-603-nexaverse
                                         <img src="images/coding-screen.jpg" alt="Web Applications">
                                     </div>
                                     <div class="service-row-content">
-                                        <h4>Web Applications</h4>
-                                        <p>Responsive, scalable web apps built with modern frameworks like React, Vue, and Next.js for optimal performance.</p>
+                                        <h4>Networking & Security</h4>
+                                        <p>Configure VNETs, subnets, firewalls, private links, identity integration, and zero-trust cloud frameworks.</p>
                                     </div>
                                     <div class="service-row-arrow">→</div>
                                 </div>
@@ -263,23 +293,43 @@ https://templatemo.com/tm-603-nexaverse
                                         <img src="images/ai-mobile-app.jpg" alt="Mobile Apps">
                                     </div>
                                     <div class="service-row-content">
-                                        <h4>Mobile Apps</h4>
-                                        <p>Native and cross-platform mobile solutions for iOS and Android that deliver seamless user experiences.</p>
+                                        <h4>Monitoring & Observability</h4>
+                                        <p>Build complete observability using Azure Monitor, Log Analytics, Application Insights, and AI-driven anomaly detection.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/ai-mobile-app.jpg" alt="Mobile Apps">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Cloud Governance</h4>
+                                        <p>Implement Azure Policies, RBAC, compliance controls, and Landing Zone standards for enterprise environments.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/ai-mobile-app.jpg" alt="Mobile Apps">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Scalability & Reliability</h4>
+                                        <p>Engineer autoscaling, redundancy, and fault-tolerant cloud architectures for mission-critical applications.</p>
                                     </div>
                                     <div class="service-row-arrow">→</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tab-pane" id="design">
+                        <div class="tab-pane" id="devops">
                             <div class="services-list">
                                 <div class="service-row">
                                     <div class="service-row-icon">
                                         <img src="images/design-screen.jpg" alt="UX/UI Design">
                                     </div>
                                     <div class="service-row-content">
-                                        <h4>UX/UI Design</h4>
-                                        <p>Beautiful, intuitive interfaces that delight users and drive engagement through research-backed design principles.</p>
+                                        <h4>CI/CD Engineering</h4>
+                                        <p>Build and manage multi-stage pipelines using Azure DevOps and GitHub Actions for automated, reliable delivery.</p>
                                     </div>
                                     <div class="service-row-arrow">→</div>
                                 </div>
@@ -288,8 +338,8 @@ https://templatemo.com/tm-603-nexaverse
                                         <img src="images/brand-identity.jpg" alt="Brand Identity">
                                     </div>
                                     <div class="service-row-content">
-                                        <h4>Brand Identity</h4>
-                                        <p>Complete brand packages including logos, typography, color systems, and comprehensive brand guidelines.</p>
+                                        <h4>Release & Deployment Automation</h4>
+                                        <p>Implement blue-green, canary, and zero-downtime deployment strategies for modern applications.</p>
                                     </div>
                                     <div class="service-row-arrow">→</div>
                                 </div>
@@ -298,23 +348,43 @@ https://templatemo.com/tm-603-nexaverse
                                         <img src="images/motion-design.jpg" alt="Motion Design">
                                     </div>
                                     <div class="service-row-content">
-                                        <h4>Motion Design</h4>
-                                        <p>Engaging animations and interactive experiences that bring your digital products to life.</p>
+                                        <h4>Version Control & Collaboration</h4>
+                                        <p>Use Git workflows, branching strategies, and automated quality checks to streamline delivery pipelines.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/motion-design.jpg" alt="Motion Design">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Incident Response & Reliability</h4>
+                                        <p>Improve platform stability using automated alerts, SRE practices, and rapid root-cause analysis.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/motion-design.jpg" alt="Motion Design">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Automation Frameworks</h4>
+                                        <p>Develop PowerShell, Python, and YAML-based automation to reduce manual work and increase efficiency.</p>
                                     </div>
                                     <div class="service-row-arrow">→</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tab-pane" id="consulting">
+                        <div class="tab-pane" id="iac">
                             <div class="services-list">
                                 <div class="service-row">
                                     <div class="service-row-icon">
                                         <img src="images/digital-strategy.jpg" alt="Digital Strategy">
                                     </div>
                                     <div class="service-row-content">
-                                        <h4>Digital Strategy</h4>
-                                        <p>Strategic planning for digital transformation initiatives that align technology with business objectives.</p>
+                                        <h4>Terraform Engineering</h4>
+                                        <p>Build reusable modules, manage state, and standardize infrastructure provisioning across Azure environments.</p>
                                     </div>
                                     <div class="service-row-arrow">→</div>
                                 </div>
@@ -323,8 +393,8 @@ https://templatemo.com/tm-603-nexaverse
                                         <img src="images/tech-audit.jpg" alt="Technology Audit">
                                     </div>
                                     <div class="service-row-content">
-                                        <h4>Technology Audit</h4>
-                                        <p>Comprehensive assessment of your tech infrastructure to identify opportunities and optimize performance.</p>
+                                        <h4>Bicep & Native IaC</h4>
+                                        <p>Create modular, secure Azure deployments using Bicep with governance and best practices built-in.</p>
                                     </div>
                                     <div class="service-row-arrow">→</div>
                                 </div>
@@ -333,23 +403,78 @@ https://templatemo.com/tm-603-nexaverse
                                         <img src="images/process-optimized.jpg" alt="Process Optimization">
                                     </div>
                                     <div class="service-row-content">
-                                        <h4>Process Optimization</h4>
-                                        <p>Streamline workflows with automation and best practices for maximum efficiency and productivity.</p>
+                                        <h4>Configuration Management</h4>
+                                        <p>Maintain consistent environments with automated patching, drift detection, and configuration baselines</p>
                                     </div>
                                     <div class="service-row-arrow">→</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="tab-pane" id="support">
+                        <div class="tab-pane" id="aks">
+                            <div class="services-list">
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/digital-strategy.jpg" alt="Digital Strategy">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Kubernetes (AKS) Operations</h4>
+                                        <p>Manage AKS clusters, scaling, upgrades, and workload optimization for cloud-native applications.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/tech-audit.jpg" alt="Technology Audit">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Containerization & Orchestration</h4>
+                                        <p>Create secure container pipelines, optimize images, and manage registries for efficient deployments.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/process-optimized.jpg" alt="Process Optimization">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Service Mesh</h4>
+                                        <p>Enable secure service-to-service communication, traffic routing, retries, and observability with Istio or OSM.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/process-optimized.jpg" alt="Process Optimization">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Helm</h4>
+                                        <p>Package, version, and deploy Kubernetes applications using Helm charts for consistent, maintainable, and repeatable deployments.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/process-optimized.jpg" alt="Process Optimization">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Docker</h4>
+                                        <p>Build, optimize, and manage Docker images and containers, enabling portable, efficient, and scalable application deployments.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="ai">
                             <div class="services-list">
                                 <div class="service-row">
                                     <div class="service-row-icon">
                                         <img src="images/247-support.jpg" alt="24/7 Support">
                                     </div>
                                     <div class="service-row-content">
-                                        <h4>24/7 Support</h4>
-                                        <p>Round-the-clock technical assistance and maintenance to keep your systems running smoothly.</p>
+                                        <h4>AI-assisted Automation</h4>
+                                        <p>Leverage Azure OpenAI to generate scripts, validate pipelines, and automate engineering workflows.</p>
                                     </div>
                                     <div class="service-row-arrow">→</div>
                                 </div>
@@ -358,8 +483,8 @@ https://templatemo.com/tm-603-nexaverse
                                         <img src="images/training-center.jpg" alt="Training">
                                     </div>
                                     <div class="service-row-content">
-                                        <h4>Training & Workshops</h4>
-                                        <p>Empower your team with expert-led training sessions tailored to your technology stack.</p>
+                                        <h4>AIOps & Intelligent Observability</h4>
+                                        <p>Use Dynatrace Davis AI, Splunk ML, and Azure Insights for anomaly detection, failure prediction, and noise reduction.</p>
                                     </div>
                                     <div class="service-row-arrow">→</div>
                                 </div>
@@ -368,8 +493,28 @@ https://templatemo.com/tm-603-nexaverse
                                         <img src="images/managed-service.jpg" alt="Managed Services">
                                     </div>
                                     <div class="service-row-content">
-                                        <h4>Managed Services</h4>
-                                        <p>End-to-end management of your digital infrastructure for worry-free operations.</p>
+                                        <h4>AI-powered Incident Management</h4>
+                                        <p>Automate RCA summaries, impact analysis, and remediation suggestions using LLM-driven insights.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/managed-service.jpg" alt="Managed Services">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>ChatOps & AI Integration</h4>
+                                        <p>Integrate AI assistants into DevOps pipelines for rapid troubleshooting and enhanced team productivity.</p>
+                                    </div>
+                                    <div class="service-row-arrow">→</div>
+                                </div>
+                                <div class="service-row">
+                                    <div class="service-row-icon">
+                                        <img src="images/managed-service.jpg" alt="Managed Services">
+                                    </div>
+                                    <div class="service-row-content">
+                                        <h4>Foundry</h4>
+                                        <p>Utilize Foundry for unified data integration, operational intelligence, and AI-driven decision support to enhance cloud reliability and platform efficiency..</p>
                                     </div>
                                     <div class="service-row-arrow">→</div>
                                 </div>
@@ -395,61 +540,104 @@ https://templatemo.com/tm-603-nexaverse
                         </svg>
                     </div>
                     <div class="small-brand">
-                        <h3>NEXAVERSE</h3>
-                        <p>Digital Excellence</p>
+                        <h3>Swarup Puvvada</h3>
+                        <p>AI-Enabled DevOps & Platform Engineer</p>
                     </div>
                 </div>
                 <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
 
                 <div class="section-header">
-                    <h2 class="section-title">Our Portfolio</h2>
-                    <p class="section-subtitle">Explore our latest works</p>
+                    <h2 class="section-title">Technologies I Work With</h2>
+                    <p class="section-subtitle">A curated collection of tools that shape my cloud, DevOps, and AI engineering work.</p>
                 </div>
 
                 <div class="filter-buttons">
                     <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
-                    <button class="filter-btn" onclick="filterGallery('web', this)">Web</button>
-                    <button class="filter-btn" onclick="filterGallery('mobile', this)">Mobile</button>
-                    <button class="filter-btn" onclick="filterGallery('branding', this)">Branding</button>
+                    <button class="filter-btn" onclick="filterGallery('cloud', this)">Cloud</button>
+                    <button class="filter-btn" onclick="filterGallery('devops', this)">DevOps</button>
+                    <button class="filter-btn" onclick="filterGallery('iac', this)">IaC</button>
+                    <button class="filter-btn" onclick="filterGallery('aks', this)">Kubernetes</button>
+                    <button class="filter-btn" onclick="filterGallery('ai', this)">AI</button>
+                    <button class="filter-btn" onclick="filterGallery('script', this)">Scripting</button>
+                    <button class="filter-btn" onclick="filterGallery('monitor', this)">Monitoring</button>
+                    <button class="filter-btn" onclick="filterGallery('security', this)">Security</button>
+                    <button class="filter-btn" onclick="filterGallery('networking', this)">Networking</button>
+                    <button class="filter-btn" onclick="filterGallery('platforms', this)">Platforms</button>
                 </div>
 
                 <div class="gallery-grid">
-                    <div class="gallery-item" data-category="web">
+                    <div class="gallery-item" data-category="all">
                         <img src="images/coding-screen.jpg" alt="Project 1">
                         <div class="gallery-overlay">
                             <h4>E-Commerce Platform</h4>
                             <p>Web Development</p>
                         </div>
+                        
                     </div>
-                    <div class="gallery-item" data-category="mobile">
+                    <div class="gallery-item" data-category="cloud">
                         <img src="images/ai-mobile-app.jpg" alt="Project 2">
                         <div class="gallery-overlay">
                             <h4>Fitness App</h4>
                             <p>Mobile Development</p>
                         </div>
                     </div>
-                    <div class="gallery-item" data-category="branding">
+                    <div class="gallery-item" data-category="devops">
                         <img src="images/brand-identity.jpg" alt="Project 3">
                         <div class="gallery-overlay">
                             <h4>Brand Identity</h4>
                             <p>Design & Branding</p>
                         </div>
                     </div>
-                    <div class="gallery-item" data-category="web">
+                    <div class="gallery-item" data-category="iac">
                         <img src="images/managed-service.jpg" alt="Project 4">
                         <div class="gallery-overlay">
                             <h4>Analytics Dashboard</h4>
                             <p>Web Application</p>
                         </div>
                     </div>
-                    <div class="gallery-item" data-category="mobile">
+                    <div class="gallery-item" data-category="aks">
                         <img src="images/ai-optimized-templates.jpg" alt="Project 5">
                         <div class="gallery-overlay">
                             <h4>Banking App</h4>
                             <p>Mobile Development</p>
                         </div>
                     </div>
-                    <div class="gallery-item" data-category="branding">
+                    <div class="gallery-item" data-category="ai">
+                        <img src="images/digital-strategy.jpg" alt="Project 6">
+                        <div class="gallery-overlay">
+                            <h4>Startup Branding</h4>
+                            <p>Design & Identity</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="script">
+                        <img src="images/digital-strategy.jpg" alt="Project 6">
+                        <div class="gallery-overlay">
+                            <h4>Startup Branding</h4>
+                            <p>Design & Identity</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="monitor">
+                        <img src="images/digital-strategy.jpg" alt="Project 6">
+                        <div class="gallery-overlay">
+                            <h4>Startup Branding</h4>
+                            <p>Design & Identity</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="security">
+                        <img src="images/digital-strategy.jpg" alt="Project 6">
+                        <div class="gallery-overlay">
+                            <h4>Startup Branding</h4>
+                            <p>Design & Identity</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="networking">
+                        <img src="images/digital-strategy.jpg" alt="Project 6">
+                        <div class="gallery-overlay">
+                            <h4>Startup Branding</h4>
+                            <p>Design & Identity</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="platforms">
                         <img src="images/digital-strategy.jpg" alt="Project 6">
                         <div class="gallery-overlay">
                             <h4>Startup Branding</h4>
@@ -475,63 +663,63 @@ https://templatemo.com/tm-603-nexaverse
                         </svg>
                     </div>
                     <div class="small-brand">
-                        <h3>NEXAVERSE</h3>
-                        <p>Digital Excellence</p>
+                        <h3>Swarup Puvvada</h3>
+                        <p>AI-Enabled DevOps & Platform Engineer</p>
                     </div>
                 </div>
                 <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
 
                 <div class="section-header">
-                    <h2 class="section-title">Client Stories</h2>
-                    <p class="section-subtitle">What our clients say about us</p>
+                    <h2 class="section-title">Work Experience</h2>
+                    <p class="section-subtitle">A journey of architecting reliable, scalable, and intelligent cloud platforms</p>
                 </div>
 
                 <div class="testimonials-grid">
                     <div class="testimonial-card">
-                        <p class="testimonial-text">Working with NexaVerse transformed our digital presence. Their innovative approach and attention to detail exceeded our expectations at every turn.</p>
+                        <p class="testimonial-text">“I lead the design and automation of Azure-based platforms supporting enterprise applications across banking, insurance, and financial domains. My work spans cloud architecture, CI/CD modernization, Infrastructure-as-Code, observability, and guiding engineering teams toward automation-first, high-reliability systems</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Client 1">
+                                <img src="images/ais.jpg" alt="Client 1">
                             </div>
                             <div class="author-info">
-                                <h5>Michael Chen</h5>
-                                <p>CEO, TechVentures</p>
+                                <h5>Applied Information Sciences (AIS)</h5>
+                                <p>Cloud Architect & Senior DevOps Engineer | 2017 to Present</p>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-text">The team's expertise in UX design helped us create an app that our users absolutely love. Our engagement metrics have increased by 200%.</p>
+                        <p class="testimonial-text">At NTT Data, I supported mission-critical financial systems for Morgan Stanley, ensuring 24×7 platform stability. I resolved high-severity incidents, optimized IIS environments, strengthened application reliability, and contributed to performance tuning and root-cause investigations</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" alt="Client 2">
+                                <img src="images/NTT.jpg" alt="Client 2">
                             </div>
                             <div class="author-info">
-                                <h5>Sarah Johnson</h5>
-                                <p>Product Director, InnovateCo</p>
+                                <h5>NTT Data Global Delivery Services</h5>
+                                <p>Senior Consultant Server & Application Engineering | 2015 to 2017</p>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-text">From strategy to execution, NexaVerse delivered exceptional results. Their commitment to quality is unmatched in the industry.</p>
+                        <p class="testimonial-text">I engineered and automated server and application operations for EDF Energy (UK). I built PowerShell automation, improved IIS deployments, implemented SSL and security controls, and streamlined production releases using Octopus Deploy.</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop" alt="Client 3">
+                                <img src="images/pike.jpg" alt="Client 3">
                             </div>
                             <div class="author-info">
-                                <h5>David Park</h5>
-                                <p>Founder, StartupHub</p>
+                                <h5>Pike Solutions</h5>
+                                <p>System Administrator | 2011 to 2015</p>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-text">The AI solutions they built for us have revolutionized our operations. We've seen a 40% increase in efficiency since implementation.</p>
+                        <p class="testimonial-text">Completed a strong academic foundation in IT, laying the groundwork for a career focused on cloud architecture, infrastructure engineering, and automation-driven DevOps practices.</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop" alt="Client 4">
+                                <img src="images/edu.jpg" alt="Client 4">
                             </div>
                             <div class="author-info">
-                                <h5>Emily Zhang</h5>
-                                <p>COO, DataFlow Inc</p>
+                                <h5>Education</h5>
+                                <p>Bachelor of Science in Information Technology 2010</p>
                             </div>
                         </div>
                     </div>
@@ -554,27 +742,43 @@ https://templatemo.com/tm-603-nexaverse
                         </svg>
                     </div>
                     <div class="small-brand">
-                        <h3>NEXAVERSE</h3>
-                        <p>Digital Excellence</p>
+                        <h3>Swarup Puvvada</h3>
+                        <p>The AI Enabled Devops Engineer</p>
                     </div>
                 </div>
                 <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
 
                 <div class="section-header">
-                    <h2 class="section-title">About Us</h2>
-                    <p class="section-subtitle">Our story, mission, and values</p>
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">My journey, purpose, and engineering philosophy</p>
                 </div>
 
                 <div class="about-content">
                     <div class="about-text">
-                        <h3>Pioneering Digital Innovation</h3>
-                        <p>Founded in 2020, NexaVerse has grown from a small team of passionate developers into a leading digital agency. We believe in pushing boundaries and creating solutions that make a real difference.</p>
-                        <p>Our diverse team brings together expertise from design, development, AI, and strategy to deliver holistic solutions that drive business growth and user engagement.</p>
-                        <p>We're not just building products – we're shaping the future of digital experiences.</p>
-                        <p>Discover AI-optimized web templates from <a href="https://templatemo.com" rel="nofollow" target="_blank">TemplateMo</a>. Maximize efficiency with the timer platform at <a href="https://timermo.com" rel="nofollow" target="_blank">TimerMo</a>. Design like a pro using vector stickers from <a href="https://www.vectorsticker.com" rel="nofollow" target="_blank">VectorSticker</a>.</p>
+                        <h3>🌐 Engineering the Future of Cloud & DevOps</h3>
+                        <p>
+                            I’m Swarup Puvvada, a Cloud Architect and DevOps Engineering Leader with
+                            14+ years of experience designing, automating, and operating mission-critical
+                            platforms across banking, medical, insurance, and energy domains.
+                        </p>
+                        <p>
+                            My expertise spans Microsoft Azure, Azure DevOps, Terraform, Kubernetes, and
+                            modern observability tools. I focus on building secure, scalable, and highly
+                            automated cloud ecosystems that enable teams to ship faster with confidence.
+                        </p>
+                        <p>
+                            I believe in an <strong>automation-first</strong> and <strong>AI-driven</strong> approach —
+                            using intelligent monitoring, data, and AI-assisted insights to reduce incidents,
+                            improve reliability, and continuously optimize systems.
+                        </p>
+                        <p>
+                            More than just running infrastructure, my mission is to shape cloud platforms
+                            that are resilient, future-ready, and aligned with real business outcomes.
+                        </p>
                     </div>
+                    
                     <div class="about-image">
-                        <img src="images/about-our-team.jpg" alt="Our Team">
+                        <img src="images/about-me.png" alt="Our Team">
                     </div>
                 </div>
             </div>
@@ -595,15 +799,15 @@ https://templatemo.com/tm-603-nexaverse
                         </svg>
                     </div>
                     <div class="small-brand">
-                        <h3>NEXAVERSE</h3>
-                        <p>Digital Excellence</p>
+                        <h3>Swarup Puvvada</h3>
+                        <p>AI-Enabled DevOps & Platform Engineer</p>
                     </div>
                 </div>
                 <button class="back-btn" onclick="backToMenu()">← Back to Menu</button>
 
                 <div class="section-header">
                     <h2 class="section-title">Get in Touch</h2>
-                    <p class="section-subtitle">Let's create something amazing together</p>
+                    <p class="section-subtitle">Let’s build intelligent cloud experiences together.</p>
                 </div>
 
                 <div class="contact-grid">
@@ -627,21 +831,21 @@ https://templatemo.com/tm-603-nexaverse
                             <div class="contact-icon">📍</div>
                             <div class="contact-details">
                                 <h4>Location</h4>
-                                <p>123 Innovation Drive, San Francisco, CA 94107</p>
+                                <p>Hyderabad, Telangana, India</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">📧</div>
                             <div class="contact-details">
                                 <h4>Email</h4>
-                                <p>hello@nexaverse.com</p>
+                                <p>swarup.puvada@gmail.com</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">📞</div>
                             <div class="contact-details">
                                 <h4>Phone</h4>
-                                <p>+1 (555) 123-4567</p>
+                                <p>+91 99630-11234</p>
                             </div>
                         </div>
                     </div>
@@ -651,7 +855,7 @@ https://templatemo.com/tm-603-nexaverse
 
         <!-- Footer -->
         <footer class="footer" id="mainFooter">
-            <p>© 2026 NexaVerse. Crafted with passion. Design by <a href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+            <p>© 2026. Crafted with passion. Design by <a href="https://swarup.site" target="_blank">Swarup Puvvada</a></p>
         </footer>
     </div>
 <script src="templatemo-nexa-scripts.js"></script>
