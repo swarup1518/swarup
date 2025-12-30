@@ -1,0 +1,218 @@
+<!--creating a login form for the Email and the login form should be in a Gradient colour with an image on left and login on right -->
+
+<!DOCTYPE html>
+
+<html lang="en">    
+
+<head>
+    <!-- Page metadata and styles -->
+    <!-- Feature: responsive meta tag for mobile devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            width: 800px;
+            height: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .image-section {
+            flex: 1;
+            background: url('https://via.placeholder.com/400') no-repeat center center;
+            background-size: cover;
+        }
+        .login-section {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .login-section h2 {
+            margin-bottom: 20px;
+        }
+        .login-section input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-section button {
+            padding: 10px;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-section button:hover {
+            background-color: #1a5edb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Feature: image-section
+             - Displays a decorative image on the left side of the card.
+             - Purely visual and marked aria-hidden="true" because it conveys no interactive information.
+        -->
+        <div class="image-section" style="background-image: url('images/ais.jpg'); background-size: cover; background-position: center;" aria-hidden="true"></div>
+
+        <!-- Feature: login-section
+             - Right column that contains the login form and UI elements.
+             - Uses semantic role="main" to help assistive technologies locate primary content.
+        -->
+        <div class="login-section" role="main">
+            <h2>Welcome back</h2>
+
+            <!-- Feature: form element with action and method
+                 - action set to /api/login by default so the same form works as a non-JS fallback.
+                 - method="post" is used for standard form submissions.
+                 - novalidate used to allow custom client-side validation in JS (you can remove if you prefer native validation).
+            -->
+            <form id="loginForm" action="/api/login" method="post" novalidate>
+
+                <!-- Feature: input fields with name attributes
+                     - name attributes are required for non-JS form submissions and server-side parsing.
+                     - required and aria-label help accessibility and basic browser hints.
+                -->
+                <input id="email" name="email" type="email" placeholder="Email" required aria-label="Email">
+                <input id="password" name="password" type="password" placeholder="Password" required aria-label="Password">
+
+                <!-- Feature: Remember me checkbox
+                     - When checked, client stores token persistently (localStorage). When unchecked, token is stored in sessionStorage.
+                -->
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;font-size:14px;">
+                    <label style="display:inline-flex;align-items:center;gap:8px;"><input type="checkbox" id="remember"> Remember me</label>
+                    <a href="#" style="color:#2575fc;text-decoration:none;">Forgot?</a>
+                </div>
+
+                <!-- Feature: submit button
+                     - type="submit" triggers the form submission; JavaScript intercepts this to run an AJAX request.
+                     - having a real submit button maintains keyboard accessibility.
+                -->
+                <button type="submit">Login</button>
+                <p id="error" style="color:#d00;display:none;margin-top:10px;font-size:14px"></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            // Feature: elements cached for reuse
+            const form = document.getElementById('loginForm');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const rememberInput = document.getElementById('remember');
+            const errorEl = document.getElementById('error');
+
+            // Feature: UI helpers
+            // showError and clearError control the visible error message area.
+            function showError(message){
+                errorEl.textContent = message;
+                errorEl.style.display = 'block';
+            }
+
+            function clearError(){
+                errorEl.textContent = '';
+                errorEl.style.display = 'none';
+            }
+
+            // Feature: form submit handler
+            // - Prevents default form POST and sends JSON via fetch to the URL in form.action
+            // - Performs client-side validation before sending
+            // - Shows feedback, disables the submit button while request is ongoing
+            // - On success stores token (localStorage/sessionStorage) and redirects
+            // - On failure shows a helpful message
+            form.addEventListener('submit', async function(e){
+                e.preventDefault();
+
+                const email = emailInput.value.trim();
+                const password = passwordInput.value;
+                const remember = rememberInput.checked;
+                const submitBtn = form.querySelector('button[type="submit"]');
+
+                // Feature: basic client-side validation
+                // - prevents obvious invalid requests and provides immediate feedback
+                const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if(!email || !password){
+                    showError('Please enter both email and password.');
+                    return;
+                }
+                if(!emailRe.test(email)){
+                    showError('Please enter a valid email address.');
+                    return;
+                }
+                if(password.length < 6){
+                    showError('Password must be at least 6 characters.');
+                    return;
+                }
+
+                clearError();
+
+                // Feature: disable submit while request runs to prevent duplicate submissions
+                submitBtn.disabled = true;
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Logging in...';
+
+                try{
+                    // Feature: configurable endpoint
+                    // - Uses form.action so you can change the endpoint in HTML without touching JS
+                    const url = form.action || '/api/login';
+
+                    // Feature: JSON API call
+                    // - Sends application/json payload. If your server expects form-encoded data, change this to use FormData or URLSearchParams.
+                    const resp = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email: email, password: password })
+                    });
+
+                    // Feature: error handling for non-2xx responses
+                    if(!resp.ok){
+                        // try to parse a JSON error message returned by the server
+                        const errData = await resp.json().catch(() => null);
+                        throw new Error((errData && errData.message) || resp.statusText || 'Login failed');
+                    }
+
+                    const data = await resp.json().catch(() => ({}));
+
+                    // Feature: token handling
+                    // - If server returns a token (e.g., JWT), save it in localStorage (persistent) or sessionStorage (session-only)
+                    // - For stronger security in production, prefer HttpOnly secure cookies set by the server instead of exposing tokens to JS.
+                    if(data.token){
+                        if(remember) localStorage.setItem('authToken', data.token);
+                        else sessionStorage.setItem('authToken', data.token);
+                    }
+
+                    // Feature: redirect after login
+                    // - Server may return a redirect URL. If not provided, fallback to index.html.
+                    window.location.href = data.redirect || 'index.html';
+
+                }catch(err){
+                    // Feature: display friendly error messages to the user
+                    showError(err.message || 'Network error, please try again.');
+                }finally{
+                    // Feature: re-enable submit button and restore text
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
